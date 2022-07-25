@@ -1,0 +1,31 @@
+.grid-container {
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-row: auto auto;
+}
+.picture {
+  padding: 20px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-row: auto auto;
+  }
+  .picture {
+    padding: 20px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
