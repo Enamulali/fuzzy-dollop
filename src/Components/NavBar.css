@@ -1,0 +1,36 @@
+.nav-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: white;
+}
+
+.navlinks-container {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  justify-content: space-around;
+}
+
+.navlinks-text {
+  font-size: 20px;
+  color: #1a6053;
+}
+
+#home {
+  font-weight: bold;
+}
+
+.mobile-nav-container {
+  background-color: red;
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    display: none;
+  }
+}
+
+.vertical-nav {
+  background-color: white;
+  display: grid;
+}

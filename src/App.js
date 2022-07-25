@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header from "./Components/Header";
+import Main from "./Components/Main";
+import NavBar from "./Components/NavBar";
+import PictureGrid from "./Components/PictureGrid";
+import Footer from "./Components/Footer";
+import BurgerNav from "./Components/BurgerNav";
+import { useEffect, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Header />
+        <NavBar />
+        {width <= 600 ? <BurgerNav /> : null}
+        <Main />
+        <PictureGrid />
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
