@@ -9,6 +9,7 @@ const Main = () => {
     <div className="main-container">
       <img
         src="/6F38F63A-1D64-455D-99FC-E510ECF2C0AD.jpeg"
+        alt="header-img"
         className="header-img"
       />
       <h2 className="main-header">LET'S GO OUTSIDE</h2>
